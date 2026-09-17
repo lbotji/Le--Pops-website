@@ -1,0 +1,1516 @@
+/* =====================================================
+   LA POPS
+   PREMIUM POPCORN WEBSITE
+===================================================== */
+
+
+/* ================= VARIABLES ================= */
+
+:root {
+
+    --black: #0b0b0b;
+
+    --dark: #151515;
+
+    --cream: #f7f0df;
+
+    --white: #ffffff;
+
+    --gold: #d4af37;
+
+    --gold-light: #f0d477;
+
+    --brown: #5b321c;
+
+    --muted: #bdb6a7;
+
+}
+
+
+/* ================= RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: 'Montserrat', sans-serif;
+
+    background: var(--black);
+
+    color: var(--white);
+
+    line-height: 1.7;
+
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(11, 11, 11, 0.96);
+
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+
+}
+
+
+.navbar {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    min-height: 80px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+}
+
+
+/* ================= LOGO ================= */
+
+/* ================= LA POPS LOGO ================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    height: 70px;
+}
+
+/* Actual logo image */
+.logo img {
+    width: 68px;
+    height: 68px;
+
+    /* Makes the image perfectly round */
+    border-radius: 50%;
+
+    /* Ensures the image fills the circle */
+    object-fit: cover;
+
+    /* Keeps the logo looking premium */
+    display: block;
+
+    /* Gold border to match the website */
+    border: 2px solid var(--gold);
+
+    /* Subtle premium effect */
+    box-shadow:
+        0 0 0 3px rgba(212, 175, 55, 0.08),
+        0 6px 18px rgba(0, 0, 0, 0.35);
+
+    /* Smooth hover effect */
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Logo hover */
+.logo img:hover {
+    transform: scale(1.8);
+
+    box-shadow:
+        0 0 0 4px rgba(212, 175, 55, 0.12),
+        0 8px 25px rgba(0, 0, 0, 0.45);
+}
+
+
+/* ================= NAV ================= */
+
+.nav-links {
+
+    list-style: none;
+
+    display: flex;
+
+    gap: 35px;
+
+}
+
+
+.nav-links a {
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s;
+
+}
+
+
+.nav-links a:hover {
+
+    color: var(--gold);
+
+}
+
+
+.menu-toggle {
+
+    display: none;
+
+    background: none;
+
+    border: none;
+
+    color: var(--gold);
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    min-height: 720px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 50px;
+
+    padding: 80px max(30px, 7vw);
+
+    background:
+
+        radial-gradient(circle at 75% 50%,
+            rgba(212, 175, 55, 0.12),
+            transparent 35%);
+
+}
+
+
+.hero-content {
+
+    max-width: 650px;
+
+}
+
+
+.eyebrow {
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.hero h1 {
+
+    font-family: 'Cinzel', serif;
+
+    font-size: clamp(45px, 6vw, 78px);
+
+    line-height: 1.08;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    color: var(--gold);
+
+}
+
+
+.hero-text {
+
+    color: var(--muted);
+
+    font-size: 18px;
+
+    max-width: 550px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+.hero-image {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    border-radius: 10px;
+
+}
+
+
+/* ================= BUTTONS ================= */
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 15px 25px;
+
+    border-radius: 2px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    transition: 0.3s;
+
+}
+
+
+.btn-primary {
+
+    background: var(--gold);
+
+    color: var(--black);
+
+}
+
+
+.btn-primary:hover {
+
+    background: var(--gold-light);
+
+    transform: translateY(-2px);
+
+}
+
+
+.btn-outline {
+
+    border: 1px solid var(--gold);
+
+    color: var(--gold);
+
+}
+
+
+.btn-outline:hover {
+
+    background: var(--gold);
+
+    color: var(--black);
+
+}
+
+
+/* ================= HERO POPCORN ================= */
+
+.hero-image {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.popcorn-display {
+
+    position: relative;
+
+    width: 390px;
+
+    height: 390px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.popcorn-icon {
+
+    font-size: 190px;
+
+    position: relative;
+
+    z-index: 2;
+
+    filter: drop-shadow(0 25px 25px rgba(0, 0, 0, 0.5));
+
+}
+
+
+.gold-ring {
+
+    position: absolute;
+
+    width: 330px;
+
+    height: 330px;
+
+    border: 1px solid var(--gold);
+
+    border-radius: 50%;
+
+    opacity: 0.5;
+
+}
+
+
+/* ================= SECTIONS ================= */
+
+section {
+
+    padding: 100px max(30px, 7vw);
+
+}
+
+
+.section-heading {
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 55px;
+
+}
+
+
+.section-heading h2 {
+
+    font-family: 'Cinzel', serif;
+
+    font-size: clamp(32px, 4vw, 50px);
+
+    margin-bottom: 15px;
+
+}
+
+
+.section-heading p:not(.eyebrow) {
+
+    color: var(--muted);
+
+}
+
+
+/* ================= INTRO ================= */
+
+.intro {
+
+    background: var(--cream);
+
+    color: var(--black);
+
+    text-align: center;
+
+}
+
+
+.intro .eyebrow {
+
+    color: var(--brown);
+
+}
+
+
+.intro-text {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    font-size: 18px;
+
+}
+
+
+/* ================= ABOUT PREVIEW ================= */
+
+.about-preview {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+}
+
+
+.about-image {
+
+    min-height: 500px;
+
+}
+
+
+.image-placeholder {
+
+    height: 100%;
+
+    min-height: 500px;
+
+    background:
+
+        radial-gradient(circle,
+            rgba(212, 175, 55, 0.15),
+            transparent 60%),
+
+        var(--dark);
+
+    border: 1px solid rgba(212, 175, 55, 0.3);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: var(--gold);
+
+    text-align: center;
+
+}
+
+
+.image-placeholder span {
+
+    font-size: 120px;
+
+}
+
+.image-placeholder span img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 1%;
+    border: 2px solid var(--gold);
+    box-shadow:
+        0 0 0 3px rgba(212, 175, 55, 0.08),
+        0 6px 18px rgba(0, 0, 0, 0.35);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.image-placeholder p {
+
+    color: var(--muted);
+
+    margin-top: 15px;
+
+}
+
+
+.about-content h2 {
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 45px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.about-content p {
+
+    color: var(--muted);
+
+    margin-bottom: 20px;
+
+}
+
+
+.text-link {
+
+    display: inline-flex;
+
+    gap: 10px;
+
+    align-items: center;
+
+    color: var(--gold);
+
+    font-weight: 700;
+
+    margin-top: 10px;
+
+}
+
+
+/* ================= FLAVOURS ================= */
+
+.flavours {
+
+    background: var(--dark);
+
+}
+
+
+.flavour-grid {
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.flavour-card {
+
+    background: var(--black);
+
+    border: 1px solid rgba(212, 175, 55, 0.15);
+
+    transition: 0.3s;
+
+    overflow: hidden;
+
+}
+
+
+.flavour-card:hover {
+
+    transform: translateY(-7px);
+
+    border-color: var(--gold);
+
+}
+
+/* =========================================
+   FLAVOUR IMAGES
+========================================= */
+
+.flavour-image {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    background: var(--dark);
+    position: relative;
+}
+
+.flavour-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+/* Subtle zoom when hovering over a flavour */
+.flavour-card:hover .flavour-image img {
+    transform: scale(1.05);
+}
+
+
+.flavour-image {
+
+    height: 180px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 85px;
+
+    background:
+
+        radial-gradient(circle,
+            rgba(212, 175, 55, 0.12),
+            transparent 65%);
+
+}
+
+
+.flavour-content {
+
+    padding: 22px;
+
+}
+
+
+.flavour-type {
+
+    color: var(--gold);
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.flavour-content h3 {
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 20px;
+
+    margin: 8px 0;
+
+}
+
+
+.flavour-content p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    min-height: 65px;
+
+}
+
+
+.price {
+
+    display: block;
+
+    margin-top: 15px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+/* ================= GALLERY ================= */
+
+.gallery {
+
+    background: var(--black);
+
+}
+
+
+.gallery-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    grid-template-rows: 250px 250px;
+
+    gap: 15px;
+
+}
+
+
+.gallery-item.large {
+
+    grid-row: span 2;
+
+}
+
+
+.gallery-placeholder {
+
+    height: 100%;
+
+    background:
+
+        linear-gradient(135deg,
+            #1c1c1c,
+            #0d0d0d);
+
+    border: 1px solid rgba(212, 175, 55, 0.2);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 70px;
+
+    color: var(--gold);
+
+}
+
+
+.gallery-placeholder img {
+
+    max-width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+   
+
+}
+
+
+/* ================= FEATURES ================= */
+
+.why-us,
+.values {
+
+    background: var(--cream);
+
+    color: var(--black);
+
+}
+
+
+.why-us .eyebrow,
+.values .eyebrow {
+
+    color: var(--brown);
+
+}
+
+
+.features {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+
+}
+
+
+.feature {
+
+    text-align: center;
+
+}
+
+
+.feature-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    margin: 0 auto 20px;
+
+    border: 1px solid var(--gold);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: var(--brown);
+
+}
+
+
+.feature h3 {
+
+    font-family: 'Cinzel', serif;
+
+    margin-bottom: 10px;
+
+}
+
+
+.feature p {
+
+    font-size: 13px;
+
+    color: #666;
+
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(circle at center,
+            rgba(212, 175, 55, 0.12),
+            transparent 45%);
+
+}
+
+
+.contact-content {
+
+    max-width: 750px;
+
+    margin: auto;
+
+}
+
+
+.contact h2 {
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.contact p {
+
+    color: var(--muted);
+
+    margin-bottom: 30px;
+
+}
+
+
+.contact-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.social-button {
+
+    padding: 14px 22px;
+
+    border: 1px solid rgba(212, 175, 55, 0.4);
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+
+}
+
+
+.social-button:hover {
+
+    background: var(--gold);
+
+    color: var(--black);
+
+}
+
+
+/* ================= PAGE HERO ================= */
+
+.page-hero {
+
+    min-height: 420px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(circle,
+            rgba(212, 175, 55, 0.12),
+            transparent 55%);
+
+}
+
+
+.page-hero h1 {
+
+    font-family: 'Cinzel', serif;
+
+    font-size: clamp(45px, 6vw, 75px);
+
+}
+
+
+.page-hero p:not(.eyebrow) {
+
+    color: var(--muted);
+
+}
+
+
+/* ================= ABOUT STORY ================= */
+
+.about-story {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+}
+
+
+.about-story-content h2 {
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 45px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.about-story-content p {
+
+    color: var(--muted);
+
+    margin-bottom: 18px;
+
+}
+
+
+.about-story-image {
+
+    min-height: 500px;
+
+}
+
+
+.large-placeholder {
+
+    min-height: 500px;
+
+}
+
+
+/* ================= MISSION ================= */
+
+.mission {
+
+    background: var(--cream);
+
+    color: var(--black);
+
+    text-align: center;
+
+}
+
+
+.mission-content {
+
+    max-width: 800px;
+
+    margin: auto;
+
+}
+
+
+.mission .eyebrow {
+
+    color: var(--brown);
+
+}
+
+
+.mission h2 {
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 50px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.mission p {
+
+    color: #555;
+
+    margin-bottom: 15px;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    /* centers the logo group */
+}
+
+.footer-logo {
+    display: inline-flex;
+    /* only as wide as LA + logo + POPS */
+    align-items: center;
+    /* vertical center */
+    justify-content: center;
+    gap: 8px;
+    /* space between LA, image, POPS */
+}
+
+.footer-logo span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+}
+footer {
+
+    background: #050505;
+
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+
+    text-align: center;
+
+    padding: 55px 30px 30px;
+
+}
+
+
+.footer-logo {
+
+    font-family: 'Cinzel', serif;
+
+    font-size: 25px;
+
+    color: var(--gold);
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+
+}
+
+.footer-logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+footer>p {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+}
+
+
+.footer-socials {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin: 25px 0;
+
+}
+
+
+.footer-socials a {
+
+    width: 40px;
+
+    height: 40px;
+
+    border: 1px solid rgba(212, 175, 55, 0.4);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: var(--gold);
+
+    transition: 0.3s;
+
+}
+
+
+.footer-socials a:hover {
+
+    background: var(--gold);
+
+    color: var(--black);
+
+}
+
+
+.copyright {
+
+    margin-top: 25px;
+
+    opacity: 0.5;
+
+}
+
+
+/* ================= WHATSAPP FLOAT ================= */
+
+.whatsapp-float {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: #25D366;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 28px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+
+    z-index: 999;
+
+    transition: 0.3s;
+
+}
+
+
+.whatsapp-float:hover {
+
+    transform: scale(1.1);
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .flavour-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .features {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+
+    .nav-links {
+
+        position: absolute;
+
+        top: 80px;
+
+        left: 0;
+
+        width: 100%;
+
+        background: var(--black);
+
+        display: none;
+
+        flex-direction: column;
+
+        padding: 25px 30px;
+
+        gap: 20px;
+
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+
+    }
+
+
+    .nav-links.active {
+
+        display: flex;
+
+    }
+
+
+    .hero {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+    }
+
+
+    .hero-content {
+
+        margin: auto;
+
+    }
+
+
+    .hero-buttons {
+
+        justify-content: center;
+
+    }
+
+
+    .about-preview,
+    .about-story {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .about-content,
+    .about-story-content {
+
+        text-align: center;
+
+    }
+
+
+    .gallery-grid {
+
+        grid-template-columns: 1fr;
+
+        grid-template-rows: repeat(3, 250px);
+
+    }
+
+
+    .gallery-item.large {
+
+        grid-row: auto;
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    section {
+
+        padding: 70px 20px;
+
+    }
+
+
+    .navbar {
+
+        padding: 0 20px;
+
+    }
+
+
+    .flavour-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .features {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .hero {
+
+        padding: 70px 20px;
+
+    }
+
+
+    .popcorn-display {
+
+        width: 280px;
+
+        height: 280px;
+
+    }
+
+
+    .popcorn-icon {
+
+        font-size: 140px;
+
+    }
+
+
+    .gold-ring {
+
+        width: 240px;
+
+        height: 240px;
+
+    }
+
+
+    .contact h2 {
+
+        font-size: 40px;
+
+    }
+
+}
