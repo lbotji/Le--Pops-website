@@ -772,6 +772,13 @@ section {
 
 }
 
+.price p {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 12px;
+    color: var(--gold);
+}
+
 
 /* ================= GALLERY ================= */
 
