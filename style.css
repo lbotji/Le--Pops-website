@@ -935,6 +935,138 @@ section {
 
 }
 
+/* =========================
+   CUSTOMER REVIEWS
+========================= */
+
+.reviews-section {
+    padding: 90px 7%;
+    background: var(--black);
+    color: var(--white);
+}
+
+.reviews-section .section-heading {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px;
+}
+
+.reviews-section .eyebrow {
+    color: var(--gold);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.reviews-section h2 {
+    color: var(--cream);
+    font-family: "Cinzel", serif;
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+}
+
+.reviews-section .section-intro {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+
+/* Reviews Grid */
+
+.reviews-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+
+/* Individual Review */
+
+.review-card {
+    background: var(--dark);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 18px;
+    padding: 32px;
+    position: relative;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Stars */
+
+.review-stars {
+    color: var(--gold);
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+
+/* Review text */
+
+.review-text {
+    color: var(--cream);
+    font-size: 0.98rem;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 28px;
+}
+
+
+/* Customer information */
+
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-top: 1px solid rgba(212, 175, 55, 0.15);
+    padding-top: 20px;
+}
+
+.review-author h4 {
+    color: var(--white);
+    margin: 0 0 5px;
+    font-size: 1rem;
+}
+
+.review-author span {
+    color: var(--gold-light);
+    font-size: 0.8rem;
+}
+
+
+/* Initials circle */
+
+.review-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+
+
+
 
 /* ================= CONTACT ================= */
 
@@ -1520,4 +1652,45 @@ footer>p {
 
     }
 
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .reviews-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .review-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .reviews-section {
+        padding: 70px 5%;
+    }
+
+    .reviews-section h2 {
+        font-size: 1.9rem;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .review-card:last-child {
+        grid-column: auto;
+        max-width: none;
+    }
+
+    .review-card {
+        padding: 25px;
+    }
 }
